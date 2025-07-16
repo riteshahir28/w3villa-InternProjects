@@ -1,0 +1,410 @@
+  body{
+            margin:0px;
+            left:0px;
+            top:0;
+        }
+        .home .navbar{
+            background: #000;
+            position:fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 100%;
+            
+            top:0;
+        }
+        .home .navbar nav{
+            
+            color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+        a{
+            color: white;
+            text-decoration: none;
+
+        }
+        ul{
+        
+            display: flex;
+
+            list-style: none;
+        }
+        li{
+            margin-left:40px ;
+            cursor: pointer;
+        }
+        .home{
+            background-image: url("/images/nn1.jpg");
+            filter: brightness(1.5);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            position:relative;
+            justify-content: center;
+            align-items: center;
+            height: 550px;
+            color:white;
+        }
+     
+        h3{
+            color: rgb(24, 39, 51);
+        
+        }
+
+          .home .container{
+            display: grid;
+            place-items: center;
+    
+        }
+        .home .container{
+            width: 400px;
+        }
+        .home .container button{
+            height: 40px;
+            width: 150px;
+            color:black;
+            border-radius: 20px;
+            border: none;
+            background: rgb(155, 199, 88);
+        }
+        button:hover{
+            font-weight: bold;
+            height:42px;
+            width:152px;
+        }
+            
+        .about{
+            display: flex;
+            position:relative;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+            background-image: url("/images/windmill.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        } 
+        .about .container {
+            height: 100%;
+            width:100%;
+            overflow: hidden;
+        }
+        .about .container .boxarea {
+            text-align: center;
+            align-items: center;
+            padding-top:10px ;
+            height: 40%;
+            width: 100%;
+             background-color: white;
+            border: 2px solid;
+        }
+        .about .container .boxarea .box-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about .container .boxarea .box-container .box{
+            height:150px;
+            width: 200px;
+            margin: 10px 10px 10px 10px;
+            overflow: hidden;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgb(181, 176, 176);
+        }
+        
+        .about .container .elementarea{
+           text-align: center;
+           display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+            width: 100%;
+       
+            
+        }
+        .about .container .elementarea .element-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 80%;
+            
+         
+        }
+
+        .about .container .elementarea .element-container .left{
+            width: 50%;
+            
+            margin-top: 10px;
+            text-align: left;
+            padding-left: 10px;
+            color: aliceblue;
+        }
+        .about .container .elementarea .element-container .left h2{
+            color:aliceblue;
+        }
+
+        .about .container .elementarea .element-container .left button{ 
+            width: 150px;
+            margin-left: 10px;
+            border-radius: 20px;
+            border: none;
+            height:40px;
+        }
+        .about .container .elementarea .element-container .right{
+            width: 50%;
+            position: relative;
+            height: 100%;
+        }
+
+         .about .container .elementarea .element-container .right img{
+          position: absolute;
+          height: 200px;
+         }
+         
+         .about .container .elementarea .element-container .right .img-1{
+            top:110px;
+            left:60px;
+         }
+        .about .container .elementarea .element-container .right .img-2{
+            top:170px;
+            left: 200px;
+         }
+         .about .container .elementarea .element-container .right .img-3{
+            top:30px;
+            
+         }
+            .portfolio{
+                height: 600px;
+                width: 100%;
+    
+    
+            }
+            .portfolio .container{
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 80px;
+                height: 80%;
+                width: 100%;
+            } 
+
+            .portfolio .container .portfolio-nav{
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .portfolio .container .img{
+                
+                position: relative;
+                width: 70%;
+            }
+            .portfolio .container img{
+                margin: 15px;
+                height: 200px;
+                width: 200px;
+            }
+
+         .blog .container{
+            height:800px;
+            width:100%;
+             
+            
+         }
+         .blog .container .post-container{
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(62, 169, 133, 0.694);
+            height:60%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         }
+         .blog .container .post-container .posts{
+            height:90%;
+            width: 60%;
+            display: grid;
+            grid-template-columns: 1fr 0.5fr;
+            grid-template-rows: 1fr 1fr;
+            gap:15px;
+             margin: 10px;
+         }
+         .blog .container .post-container .posts .post-1{
+            
+            grid-row: span 2;
+            /* border: 2px solid; */
+            position: relative;
+         }
+         
+         .blog .container .post-container .posts .post-1 .img-1{ 
+             object-fit: cover;
+             display: block;
+            height:100%;
+            width: 100%;
+            margin:0;
+         }
+         .blog .container .post-container .posts .post-1 .post-content-1{
+            color: aliceblue;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            bottom: 0;
+             flex-direction: column;
+            position: absolute;
+         }
+        .blog .container .post-container .posts .post-2{
+           
+            border: 2px solid;
+            position: relative;
+         }
+         .blog .container .post-container .posts .post-2 .img-2{ 
+             object-fit: cover;
+             display: block;
+            height:100%;
+            width: 100%;
+            margin:0;
+         }
+         .blog .container .post-container .posts .post-2 .post-content-2{
+            color: aliceblue;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            bottom: 0;
+             flex-direction: column;
+            position: absolute;
+         }
+         .blog .container .post-container .posts .post-3{
+            border: 2px solid;
+            position: relative;
+         }
+          .blog .container .post-container .posts .post-3 .img-3{ 
+             object-fit: cover;
+             display: block;
+            height:100%;
+            width: 100%;
+            margin:0;
+         }
+         .blog .container .post-container .posts .post-3 .post-content-3{
+            color: aliceblue;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            bottom: 0;
+             flex-direction: column;
+            position: absolute;
+         }
+
+         .blog .container .box-container{
+            height: 40%;
+            width: 100%;
+            /* background-color: black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+          .blog .container .box-container .boxes{
+            height:100%;
+            width: 60%;
+            /* border: 2px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+
+         .blog .container .box-container .boxes .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid; */
+            height: 100px ;
+            width: 250px;
+            margin: 10px;
+            font-weight: bolder;
+            background-color: rgba(212, 218, 223, 0.452);
+            
+         }
+.blog .container .box-container .boxes .box .p{
+    color:rgb(40, 148, 3);
+    font-size: 22px;
+}
+     
+    .contact{
+        height: 700px;
+        width: 100%;
+        background-color: rgb(177, 169, 169);
+        display: flex;
+        
+        justify-content: center;
+        
+    }
+    .contact .container{
+        width: 60%;
+         text-align: center;
+        
+    }
+   .contact-grid{
+    display: grid;
+    grid-template-columns: 475px  475px;
+    grid-template-rows: 560px;
+     
+   }
+   .contact-grid .item1 img{
+        display: block;
+        margin: 0;
+        object-fit: cover;
+        height: 100%;;
+        width: 100%;
+   }
+   .contact-grid .item2 .user{
+    height: 50px;
+    width: 200px;
+    background: transparent;
+
+   }
+   .contact-grid .item2 form{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content:left;
+    font-size: 22px;
+    
+   } 
+   .contact-grid .item2 .email{
+    height: 50px;
+    width: 200px;
+    background: transparent;
+   }
+   .contact-grid .item2 .textarea{
+    margin-top: 10px;
+    margin-left: 10px;
+    height:300px;
+    background: transparent;
+    width: 420px;
+   }
+   .contact-grid .item2 .button{
+    height: 50px;
+    border-radius: 20px;
+    width: 170px;
+    font-size: 20px;
+    background-color: rgb(107, 219, 131);
+   }
+
+   footer{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+     padding: 20px;
+      box-sizing: border-box;
+    background-color: rgb(191, 183, 183);
+   }

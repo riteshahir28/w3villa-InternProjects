@@ -47,13 +47,12 @@
     justify-content: center;
  }
  .custom-search {
-    height: 70px;
-    display: flex;
-    width: 500px;        
+           
     background-color: white;  
     align-items: center;
     border-radius: 50px;
-    justify-content:space-around;  
+    display: flex;
+    flex-wrap: wrap; 
     gap:20px;
     
      
@@ -101,4 +100,27 @@
     display: none;
  }
   
- 
+ .brows-nav .nav-item:hover{
+   background-color: var(--bg-color) !important;
+ }
+ .finance-col-2{
+    color:aliceblue;
+    background: var(--main-gradient) !important;
+ }
+
+ #HOW-IT-WORK{
+   background-image: linear-gradient(rgba(28, 212, 185, 0.692), rgba(5, 76, 96, 0.957)), url('../images/adver.png');
+ }
+
+  #CONTACT{
+   background-color: rgb(192, 209, 224);
+  }
+  #contact-btn{
+   background-color: aqua;
+  }
+
+  footer{
+   border-bottom: 10px solid aqua;
+   border-bottom-right-radius: 100px ;
+   background: linear-gradient(to right, rgb(10, 222, 204) 50%, transparent 70%);
+  }

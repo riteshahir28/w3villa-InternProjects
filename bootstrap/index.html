@@ -33,23 +33,21 @@
                 <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
                     <ul class="navbar-nav gap-4 nav-ul">
                         <li class="nav-item">
-                            <a class="nav-link  " href="#">HOME</a>
+                            <a class="nav-link  " href="#HOME">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">BROWSE TOPICS</a>
+                            <a class="nav-link" href="#BROWS-TOPICS">BROWSE TOPICS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOW IT WORKS</a>
+                            <a class="nav-link" href="#HOW-IT-WORK">HOW IT WORKS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">FAQS</a>
+                            <a class="nav-link" href="FAQS">FAQS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
+                            <a class="nav-link" href="#CONTACT">CONTACT</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
-                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">PAGE</a>
@@ -73,20 +71,19 @@
     </header>
 
     <main>
-        <section class="container-fluid ">
+        <section class="container-fluid " id="HOME">
             <!-- row-1 -->
             <div class="row py-5 row-1">
                 <!-- row-1 -->
                 <div class="col-12 text-center justify-content-center  home-col-2 ">
                     <p class="h2">Discover. Learn. Enjoy</p>
                     <p>platform for creatives around the world</p>
-                    <div class="input-group mx-auto custom-search">
-                        <div class=" rounded-4  d-flex align-items-center w-100 h-100 px-4">
+                    <div class="col-md-4 p-3 mx-auto custom-search ">
+                        <form class="form-inline d-flex gap-4 align-items-center">
                             <i class="fas fa-search text-black"></i>
-                            <input type="text" name="search" id="search" class="form-control  input-box"
-                                placeholder="Search here...">
-                            <input type="button" value="Search" class="btn btn-primary w-25 h-75 " id="button">
-                        </div>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -107,9 +104,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 <div class="card col-md-6 border bg-white p-3 shadow right-col text-white">
                     <div class="card-title d-flex justify-content-between">
                         <p class="h3">Finance</p>
@@ -136,36 +130,53 @@
 
                 </div>
         </section>
-
-        <section class="container-fluid text-center mt-4">
+        <section class="container-fluid text-center mt-4 " id="BROWS-TOPICS">
             <p class="h2"> Brows Topics</p>
-            <nav class="navbar navbar-expand-lg bg-light px-4 py-4  brows-navbar">
-                <div class="collapse navbar-collapse justify-content-center">
-                    <ul class="navbar-nav gap-5 ml-4 fs-4 brows-nav-ul">
-                        <li class="nav-item"><a href="#Design" class="nav-link">Design</a></li>
-                        <li class="nav-item"><a href="#Marketing" class="nav-link">Marketing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Music</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Education</a></li>
-                    </ul>
+            <nav class="navbar  navbar-expand-lg bg-light px-4 py-4  ">
+                <div class="container-fluid h-50">
+                    <!-- Toggle Button for mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#browsNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- CENTER: Links -->
+                    <div class="collapse navbar-collapse justify-content-center" id="browsNavbar">
+                        <ul class="navbar-nav gap-4  brows-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="setClass('Design')">Design</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="setClass('Marketing')">Marketing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="setClass('Finance')">Finance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="setClass('Music')">Music</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="setClass('Education')">Education</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
             <!-- row-1 for Design -->
-            <div class="row row-section active justify-content-center gap-5 ml-4 p-5" id="Design">
+            <div class="row row-section active justify-content-center gap-5 ml-4 " id="Design">
                 <!-- column 1 -->
-                <div class="card col-md-3 border bg-white p-3 shadow left-col">
+                <div class="card col-md-3 border bg-white p-4 shadow left-col">
                     <div class="card-title d-flex justify-content-between">
                         <p class="h3">Web Design</p>
                         <p class="h3">23</p>
                     </div>
 
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
-                            maiores modi illum! Perspiciatis reprehende ate quibusdam? Molestias dicta
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. reprehende ate quibusdam? Molestias
+                            dicta
                             itis explicabo nec error!</p>
 
                         <div class="card-item justify-content-center d-flex">
-                            <img src="images/rem.png" alt="image" class="card-item w-75">
+                            <img src="images/web.png" alt="image" class="card-item w-75">
                         </div>
                     </div>
                 </div>
@@ -179,12 +190,11 @@
                     </div>
 
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
-                            maiores modi illum! Perspiciatis reprehende ate quibusdam? Molestias dicta
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dicta
                             itis explicabo nec error!</p>
 
                         <div class="card-item justify-content-center d-flex">
-                            <img src="images/rem.png" alt="image" class="card-item w-75">
+                            <img src="images/grap.png" alt="image" class="card-item w-75">
                         </div>
                     </div>
                 </div>
@@ -197,12 +207,11 @@
                     </div>
 
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
-                            maiores modi illum! Perspiciatis reprehende ate quibusdam? Molestias dicta
+                        <p> Perspiciatis reprehende ate quibusdam? Molestias dicta
                             itis explicabo nec error!</p>
 
                         <div class="card-item justify-content-center d-flex">
-                            <img src="images/rem.png" alt="image" class="card-item w-75">
+                            <img src="images/logoD.png" alt="image" class="card-item w-75">
                         </div>
                     </div>
                 </div>
@@ -213,8 +222,8 @@
 
 
 
-             <!-- row-2 for Marketing-->
-            <div class="row  justify-content-center gap-5 ml-4 p-5  row-section " id="Marketing">
+            <!-- row-2 for Marketing-->
+            <div class="row row-section  justify-content-center gap-5 ml-4 p-5 " id="Marketing">
                 <!-- column 1 -->
                 <div class="card col-md-3 border bg-white p-3 shadow left-col">
                     <div class="card-title d-flex justify-content-between">
@@ -224,11 +233,10 @@
 
                     <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
-                            maiores modi illum! Perspiciatis reprehende ate quibusdam? Molestias dicta
-                            itis explicabo nec error!</p>
+                            maiores modi illum! </p>
 
                         <div class="card-item justify-content-center d-flex">
-                            <img src="images/rem.png" alt="image" class="card-item w-75">
+                            <img src="images/adver.png" alt="image" class="card-item w-75">
                         </div>
                     </div>
                 </div>
@@ -243,11 +251,10 @@
 
                     <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
-                            maiores modi illum! Perspiciatis reprehende ate quibusdam? Molestias dicta
-                            itis explicabo nec error!</p>
+                            maiores modi illum! </p>
 
                         <div class="card-item justify-content-center d-flex">
-                            <img src="images/rem.png" alt="image" class="card-item w-75">
+                            <img src="images/video.png" alt="image" class="card-item w-75">
                         </div>
                     </div>
                 </div>
@@ -261,26 +268,347 @@
 
                     <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
-                            maiores modi illum! Perspiciatis reprehende ate quibusdam? Molestias dicta
-                            itis explicabo nec error!</p>
+                            maiores modi illum! Perspiciatis reprehende ate quibusdam? </p>
 
                         <div class="card-item justify-content-center d-flex">
-                            <img src="images/rem.png" alt="image" class="card-item w-75">
+                            <img src="images/tweet.png" alt="image" class="card-item w-75">
                         </div>
                     </div>
                 </div>
 
             </div>
+            <!-- row-3 Finance -->
+
+            <div class="row row-section  justify-content-center gap-3 ml-2" id="Finance">
+                <!-- column 1 -->
+                <div class="card col-md-5 border bg-white p-4 shadow left-col">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Web Design</p>
+                        <p class="h3">23</p>
+                    </div>
+
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
+                        </p>
+
+                        <div class="card-item justify-content-center d-flex">
+                            <img src="images/web.png" alt="image" class="card-item w-75">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- column 2 -->
+
+                <div class="card col-md-5 border p-3 shadow left-col finance-col-2">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Finance</p>
+                        <p class="h3">25</p>
+                    </div>
+
+                    <div class="card-body px-4 d-flex flex-wrap">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
+                            maiores modi illum! </p>
+                        <button class="btn btn-info h-25 w-50">Learn more</button>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between mb-2">
+                        <div class="card-item d-flex gap-4 align-items-center">
+                            <p>Share : </p>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-copy"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- row-4 Music -->
+            <div class="row row-section  justify-content-center gap-3 ml-2" id="Music">
+                <!-- column 1 -->
+                <div class="card col-md-3 border bg-white p-4 shadow left-col">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Composing Song</p>
+                        <p class="h3">23</p>
+                    </div>
+
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <div class="card-item justify-content-center d-flex">
+                            <img src="images/composingSong.png" alt="image" class="card-item w-75">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- column 2 -->
+
+                <div class="card col-md-3 border bg-white p-3 shadow left-col">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Online Song</p>
+                        <p class="h3">16</p>
+                    </div>
+
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui </p>
+
+                        <div class="card-item justify-content-center d-flex">
+                            <img src="images/onlineSong.png" alt="image" class="card-item w-75">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- column 3 -->
+                <div class="card col-md-3 border bg-white p-3 shadow left-col">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Podcast</p>
+                        <p class="h3">20</p>
+                    </div>
+
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a </p>
+
+                        <div class="card-item justify-content-center d-flex">
+                            <img src="images/podcastSong.png" alt="image" class="card-item w-75">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- row-5 Education -->
+            <div class="row row-section  justify-content-center gap-3 ml-2" id="Education">
+                <!-- column 1 -->
+                <div class="card col-md-5 border bg-white p-4 shadow left-col">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Graduation</p>
+                        <p class="h3">23</p>
+                    </div>
+
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur rror!</p>
+
+                        <div class="card-item justify-content-center d-flex">
+                            <img src="images/graduation.png" alt="image" class="card-item w-75">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- column 2 -->
+
+                <div class="card col-md-5 border bg-white p-3 shadow left-col">
+                    <div class="card-title d-flex justify-content-between">
+                        <p class="h3">Educator</p>
+                        <p class="h3">16</p>
+                    </div>
+
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque incidunt qui quae a fuga
+                        </p>
+
+                        <div class="card-item justify-content-center d-flex">
+                            <img src="images/educator.png" alt="image" class="card-item w-75">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            </div>
         </section>
 
+        <section class="container-fluid text-center mt-5 py-4 text-white" id="HOW-IT-WORK">
+            <p class="h2">How does it work?</p>
+            <class class="row d-flex justify-content-center">
+                <div class="col-md-1 bg-info">
 
+                </div>
+                <div class="col-md-8  ">
+                    <div class="py-4">
+                        <div class="card-title d-flex justify-content-start px-2 py-2">
+                            <p class="h4">Search your favourite topic</p>
+                        </div>
+                        <div class="text-start px-2 lh-lg">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A laudantium ipsam pariatur unde
+                            enim rem accusantium iusto dignissimos porro vel aperiam exercitationem maxime perspiciatis
+                            harum voluptatum praesentium in, omnis tenetur! Enim saepe, magni doloribus iure adipisci id
+                            perspiciatis modi sed minus possimus nobis consequatur, quidem est dolore aliquid
+                            dignissim tenetur necessitatibus nam? Quos, fuga cum cupiditate culpa, vero repellat
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <div class="card-title d-flex justify-content-start px-2 py-2">
+                            <p class="h4">Bookmark & Keep it for yourself</p>
+                        </div>
+                        <div class="text-start px-2 lh-lg">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A laudantium ipsam pariatur unde
+                            enim rem accusantium iusto dignissimos porro vel aperiam exercitationem maxime perspiciatis
+                            harum voluptatum praesentium in, omnis tenetur! Enim saepe, magni doloribus iure adipisci id
+                            perspiciatis modi sed minus possimus nobis consequatur, quidem est dolore aliquid
+                            dignissim tenetur necessitatibus nam? Quos, fuga cum cupiditate culpa, vero repellat
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <div class="card-title d-flex justify-content-start px-2 py-2">
+                            <p class="h4">Read & Enjoy</p>
+                        </div>
+                        <div class="text-start px-2 lh-lg">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A laudantium ipsam pariatur unde
+                            enim rem accusantium iusto dignissimos porro vel aperiam exercitationem maxime perspiciatis
+                            harum voluptatum praesentium in, omnis tenetur! Enim saepe, magni doloribus iure adipisci id
+                            perspiciatis modi sed minus possimus nobis consequatur, quidem est dolore aliquid
+                            dignissim tenetur necessitatibus nam? Quos, fuga cum cupiditate culpa, vero repellat
+                        </div>
+                    </div>
+                </div>
+            </class>
+        </section>
+
+        <section class="container-fluid mt-5 py-4 text-dark" id="FAQS">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5">
+                    <p class="h1">Frequently Asked Questions</p>
+                    <img src="images/quest.png" alt="image" class="w-75">
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                   <p class="h4"> What is topic listing ?</p>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion body.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <p class="h4">How to find a topics ?</p>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    accordion body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    <p class="h4">Does it needto paid ?</p>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion body. Nothing more exciting happening here in terms of content, but just
+                                    filling up the space to make it look, at least at first glance, a bit more
+                                    representative of how this would look in a real-world application.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid mt-5 py-4 text-center text-dark  " id="CONTACT">
+                <p class="h2">Get in touch</p>
+            <div class="row ">
+                <div class="col-md-4 mt-2 p-4">
+                    <iframe class="embed-responsive-item border border-2  border-dark rounded-2" allowfullscreen  src="https://maps.google.com/maps?q=Singapore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    <!-- <iframe allowfullscreen src="  frameborder="3" class="border   round-50"></iframe> -->
+                </div>
+                <div class="card col-md-3 p-4 m-4">
+                    <div class="card-title">
+                        <p class="h4">Head Office</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="h4">Phone :<span class="h6"> 89384782347</span></p>
+                        <p class="h5">Email :<span class="h6"> :ritesh@gmail.com</span></p>
+                    </div>
+                </div>
+                <div class="card col-md-3 p-4 m-4">
+                    <div class="card-title">
+                        <p class="h4">Dubai Office</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="h4">Phone :<span class="h6"> 89384782347</span></p>
+                        <p class="h5">Email :<span class="h6"> :ritesh@gmail.com</span></p> 
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
+    <footer class="container-fluid mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="py-4">
+                    <a class="navbar-brand fw-bold fs-3 px-4 " href="#">
+                        <i class="fa-solid fa-clone"></i>
+                        TOPICS</a>
+                </div>
+                </div>
+                <div class="col-md-3">
+                    <p class="h4 py-4">Resources</p>
+                    <p>Home</p>
+                    <p>How it work</p>
+                    <p>Contact</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="h4 py-4">Information</p>
+                    <p>234342-2343</p>
+                    <p>sdf@company.com</p>
+                  
+                </div>
+                <div class="col-md-3">
+                    <button class="btn " id="contact-btn">English</button> 
+                    <p>ritesh kumar yadav</p>
+                    <p>Address:br</p>
+                    <p class="py-2">Design : templatemo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 
     <script>
-         const links = document.querySelectorAll(".nav-link");
+        const rows = document.querySelectorAll('.row-section');
+        function setClass(id) {
+            rows.forEach(row => row.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
     </script>
-    </body>
+</body>
 
 
 </html>

@@ -1,18 +1,19 @@
 import { useState , useRef} from "react";
-
-function Newuser({username , setUserName}) {
+import Footer from "../components/Footer";
+function Newuser({username ,useremail, setUserName}) {
 
     const nameRef = useRef(null);
     const emailRef = useRef(null);
     
     const changeUser = (event)=>{
         event.preventDefault();
-    
-        
-        setUserName(nameRef.current.value);
+        console.log("user name : ",username);
+        console.log("user email :" ,useremail);
+        setUserName([nameRef.current.value,emailRef.current.value,setUserName]);
     }
 
     return (
+        <>
         <div class="container-fluid d-flex justify-content-center p-4" >
             <div class="card col-md-5 pb-4  ">
                 <div class="card-body">
@@ -34,7 +35,10 @@ function Newuser({username , setUserName}) {
                     </form>
                 </div>
             </div>
+
         </div>
+        <Footer></Footer>
+        </>
     )
 }
 

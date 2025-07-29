@@ -5,7 +5,7 @@ import { UserName } from "./CreateContaxt";
 
 function Navbar(){
     const uName = useContext(UserName);
-    console.log(uName.loggedUser);
+     
     
     
     return(
@@ -14,7 +14,7 @@ function Navbar(){
       <div className="container-fluid">
        
         {/* Left Side: Navbar Brand */}
-        <a className="navbar-brand" href="#">{uName.loggedUser}</a>
+        <a className="navbar-brand" href="#">{uName.loggedUser[0]}</a>
 
         {/* Toggle Button for Mobile */}
         <button

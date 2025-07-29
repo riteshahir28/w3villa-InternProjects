@@ -1,8 +1,12 @@
-function Footer(name) {
+import { useContext } from "react";
+import { UserName } from "./CreateContaxt";
+
+function Footer() {
+  const user = useContext(UserName);
   return (
     <footer className="bg-dark text-white text-center py-3 fixed-bottom">
       <div className="container">
-        <span>Name : {name}  | Your Website | All rights reserved</span>
+        <span>{user.loggedUser[0]}  | {user.loggedUser[1]} </span>
       </div>
     </footer>
   );

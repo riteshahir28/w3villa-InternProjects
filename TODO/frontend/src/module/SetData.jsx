@@ -1,12 +1,15 @@
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 function SetData() {
+    const navigate=useNavigate()
  
 
     const titleRef = useRef();
     const nameRef = useRef();
 
 
-    const pData = async () => {
+    const pData = async (e) => {
+        e.preventDefault();
         const data = {
             "title": titleRef.current.value,
             "name": nameRef.current.value
@@ -24,7 +27,9 @@ function SetData() {
             let res = await fetch("http://localhost:3001/todos", bd);
             let json = await res.json();
             console.log("Response from server:", json);
-            alert(json);
+
+            alert("add successful");
+            navigate("/");
         } catch (err) {
             alert(err);
             console.error("Fetch error:", err);

@@ -13,7 +13,6 @@ app.get('/crud',async (req,res)=>{
     try{    
         const data = await model.find();
         return res.status(200).json(data);
-        // return res.status(200).json({"message" :"get data successful !"});
     }catch(err){
         return res.status(500).json({"message" :"something went wrong"});
     }

@@ -137,9 +137,9 @@ export default function App() {
       </form>
 
       {/* List */}
-      {todos.length === 0 ? (
-        <p style={{ textAlign: "center" }}>No Todos Yet</p>
-      ) : (
+
+      {Array.isArray(todos) && todos.length > 0 ? 
+      (
         <ul style={{ listStyle: "none", padding: 0 }}>
           {todos.map((todo, index) => (
             <li
@@ -187,7 +187,9 @@ export default function App() {
             </li>
           ))}
         </ul>
-      )}
+      ):(
+        <p style={{ textAlign: "center" }}>No Todos Yet</p>
+      ) }
     </div>
   );
 }

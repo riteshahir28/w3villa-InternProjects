@@ -1,0 +1,17 @@
+# Node modules folder ignore
+node_modules/
+
+# Environment file ignore (passwords, API keys, etc.)
+.env
+
+# Log files ignore
+*.log
+npm-debug.log*
+
+# OS-specific files ignore
+.DS_Store
+Thumbs.db
+
+# Build files ignore
+dist/
+build/

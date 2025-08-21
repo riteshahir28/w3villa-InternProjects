@@ -1,10 +1,12 @@
 import { useState } from "react";
 import API from "../api"; // 👈 apne api.js ka path
 import { useAuth } from "../authcontext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const navigate = useNavigate();
 
-    const { setIsLoggedIn } = useAuth();
+    const { setIsLoggedIn, setUser } = useAuth();
 
     const [formData, setFormData] = useState({
         email: "",
@@ -35,9 +37,11 @@ function Login() {
             const response = await API.post("/api/login", formData, {withCredentials:true});
 
             if (response.status === 200) {
-                setIsLoggedIn(true);
+                setIsLoggedIn(true);                
                 alert("Login successful!");
                 setFormData({ email: "", password: "" });
+                setUser(response.data.user)
+                navigate("/Profile");
             }
         } catch (error) {
             console.error("Error:", error);

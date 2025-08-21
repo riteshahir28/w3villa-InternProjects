@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
         const res = await axios.get("http://localhost:5000/api/profile", {
           withCredentials: true,
         });
-        setUser(res.data.user);
+        setUser(res.data.user);      
         setIsLoggedIn(true);
       } catch (err) {
         setUser(null);

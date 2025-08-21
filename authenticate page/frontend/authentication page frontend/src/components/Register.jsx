@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 navigate hook import
 import API from "../api"; // 👈 path apne project ke hisaab se adjust karo
 
 function Register() {
@@ -7,6 +8,8 @@ function Register() {
         email: "",
         password: "",
     });
+
+    const navigate = useNavigate(); // 👈 navigate instance
 
     const handleChange = (e) => {
         setFormData({
@@ -24,6 +27,9 @@ function Register() {
             if (response.status === 200) {
                 alert("Registration successful!");
                 setFormData({ name: "", email: "", password: "" });
+
+                // 👇 yaha pe login page pe redirect
+                navigate("/login");
             }
         } catch (error) {
             console.error("Error:", error);

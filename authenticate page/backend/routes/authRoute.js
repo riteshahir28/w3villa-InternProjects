@@ -15,4 +15,14 @@ router.get("/profile", authMiddleware, (req, res) => {
   res.json({ message: "Welcome to your profile!", user: req.user });
 });
 
+router.post("/logout", (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,     // production me true rakho (HTTPS ke liye)
+    sameSite: "strict",
+  });
+  res.json({ message: "Logged out successfully" });
+});
+
+
 module.exports = router;

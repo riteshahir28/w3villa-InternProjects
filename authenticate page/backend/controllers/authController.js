@@ -51,12 +51,21 @@ exports.loginUser = async (req, res) => {
 
     // JWT Token generate
     const token = jwt.sign(
-      { id: user._id, email: user.email },
-      "mySecretKey", // ⚡ yaha tum .env file use kar sakte ho for security
+      { id: user._id, email: user.email, name:user.name },
+      process.env.JWT_SECRET, // ✅ yaha .env use karo
       { expiresIn: "1h" }
     );
+    console.log(token);
+    
+    // Cookie set karo
+    res.cookie("token", token, {
+      httpOnly: true, // JS se access nahi hoga
+      secure: false,  // agar HTTPS hoga to true kar dena
+      sameSite: "strict",
+      maxAge: 60 * 60 * 1000 // 1 hour
+    });
 
-    res.json({ message: "Login successful", token });
+    res.json({ message: "Login successful" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

@@ -1,12 +1,8 @@
 const jwt = require("jsonwebtoken");
 
-// Middleware function
 const authMiddleware = (req, res, next) => {
-  // Token header se lena hoga
-  const authHeader = req.headers["authorization"];
-
-  // Format hoga => "Bearer <token>"
-  const token = authHeader && authHeader.split(" ")[1];
+  // ✅ Token cookies se nikalna
+  const token = req.cookies.token;
 
   if (!token) {
     return res.status(401).json({ message: "Access Denied, Token Missing!" });
@@ -16,10 +12,9 @@ const authMiddleware = (req, res, next) => {
     // Token verify karo
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // decoded me user ki id hoti hai
-    req.user = decoded;  
+    req.user = decoded; // user info store
 
-    next(); // aage controller pe chala jaega
+    next();
   } catch (error) {
     res.status(403).json({ message: "Invalid or Expired Token!" });
   }

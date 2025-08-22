@@ -1,0 +1,119 @@
+/* Light and mobile-friendly styles for Image Gallery */
+
+/* Simple background */
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Card styling */
+.card {
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.btn {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 6px;
+  border: none;
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 8px;
+  border: none;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  /* Ensure file input is visible on mobile */
+  input[type="file"] {
+    font-size: 16px; /* Prevents zoom on iOS */
+    width: 100%;
+  }
+  
+  /* Smaller images on mobile */
+  .card-img-top {
+    height: 120px !important;
+  }
+  
+  /* Smaller delete button on mobile */
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Simple hover effects */
+.card:hover .card-img-top {
+  opacity: 0.9;
+}
+
+/* Loading spinner */
+.spinner-border {
+  color: #0d6efd;
+}
+
+/* Badge styling */
+.badge {
+  border-radius: 12px;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Simple animation for new uploads */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: fadeIn 0.3s ease-out;
+}
+

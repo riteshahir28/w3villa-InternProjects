@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+        }
+
+        input[type="submit"] {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #6c63ff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #5145cd;
+        }
+
+        ul {
+            list-style: none;
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ul::-webkit-scrollbar-thumb {
+            background: #6c63ff;
+            border-radius: 6px;
+        }
+
+        li {
+            background: #f1f1f1;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        li strong {
+            color: #6c63ff;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="submit"] {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Fill the Guestbook</h2>
+        <form action="/add" method="post" enctype="application/x-www-form-urlencoded">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="text" name="message" placeholder="Your message" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Messages</h2>
+        <ul>
+            <% message.forEach((m)=> { %>
+                <li>
+                    <strong>
+                        <%= m.name %>:
+                    </strong>
+                    <%= m.message %>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
 
-    const socket = new WebSocket("ws://localhost:3000");
+    const socket = new WebSocket("https://chat-app-backend-tnei.onrender.com/");
 
     socket.onopen = () => {
       console.log("Connected to   server ");

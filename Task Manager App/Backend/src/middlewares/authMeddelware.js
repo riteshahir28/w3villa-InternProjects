@@ -37,8 +37,8 @@ export const protect = async (req, res, next) => {
      
           res.cookie("accessToken", newAccessToken, {
             httpOnly: true,
-            secure: false, // prod = true
-            sameSite: "strict",
+            secure: true, // prod = true
+            sameSite: "none",
             maxAge: 5 * 60 * 1000, // 5 min
           });
 

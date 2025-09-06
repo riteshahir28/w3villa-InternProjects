@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import API from "../../utils/api";
 
 
-export default function Register({ onRegister }) {
+export default function Register() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
@@ -27,8 +27,6 @@ export default function Register({ onRegister }) {
 
     try {
       const { data } = await API.post("/register", formData); // axios ka use
-      
-      onRegister(data);
       navigate("/login");
     } catch (err) {
       setError(

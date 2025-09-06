@@ -14,7 +14,7 @@ function UserDashboard() {
     if (isAuthenticated) {
       setLoading(true);
       axios
-        .get("http://localhost:5000/api/tasks/getMyTasks", { withCredentials: true })
+        .get("https://task-manager-backend-bsa2.onrender.com/api/tasks/getMyTasks", { withCredentials: true })
         .then((res) => setTasks(res.data))
         .catch((err) => console.error(err))
         .finally(() => setLoading(false));

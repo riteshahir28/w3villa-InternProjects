@@ -1,0 +1,18 @@
+# Copy this content to a new file named .env in the Backend directory
+
+# Database Configuration
+DB_NAME=TaskManager
+DB_USER=root
+DB_PASS=1234
+DB_HOST=localhost
+DB_PORT=3306
+
+# JWT Configuration
+ACCESS_TOKEN_SECRET=your_super_secret_access_token_key_here_make_it_long_and_secure_12345
+REFRESH_TOKEN_SECRET=your_super_secret_refresh_token_key_here_make_it_long_and_secure_67890
+JWT_ACCESS_EXPIRE=15m
+JWT_REFRESH_EXPIRE=7d
+
+# Server Configuration
+PORT=5000
+NODE_ENV=development

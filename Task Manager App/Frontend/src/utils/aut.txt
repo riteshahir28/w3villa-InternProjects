@@ -1,0 +1,27 @@
+src/
+ ├── components/
+ │    ├── Navbar.jsx      <-- yahi pe Navbar component hoga
+ │    ├── Footer.jsx
+ │    └── ... (other common UI components)
+ │
+ ├── pages/
+ │    ├── Auth/
+ │    │    ├── Login.jsx
+ │    │    ├── Register.jsx
+ │    │    └── ...
+ │    ├── Dashboard.jsx
+ │    ├── Tasks/
+ │    │    ├── TaskList.jsx
+ │    │    ├── TaskDetail.jsx
+ │    │    └── TaskForm.jsx
+ │    └── Users/
+ │         └── UserList.jsx
+ │
+ ├── context/
+ │    └── AuthContext.js   <-- login state, user role, token refresh
+ │
+ ├── utils/
+ │    └── api.js           <-- API calls centralised
+ │
+ ├── App.jsx
+ └── index.js
